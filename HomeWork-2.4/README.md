@@ -15,6 +15,7 @@
 
 *7. Кто автор функции synchronizedWriters?*
 
+### Ответы:
 
 1. git show aefea
 
