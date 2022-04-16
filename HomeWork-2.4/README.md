@@ -44,7 +44,7 @@
     Merge: 58dcac4b7 ffbcf5581
     Author: Chris Griggs <cgriggs@hashicorp.com>
     Date:   Mon Jan 13 13:19:09 2020 -0800
-``
+```
 
 4. git log --pretty=format:"%H %s" v0.12.23..v0.12.24
 
