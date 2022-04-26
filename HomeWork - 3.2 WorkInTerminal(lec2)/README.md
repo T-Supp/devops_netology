@@ -6,14 +6,14 @@
 И выходя из сессии, придется выходить из всех сессий, которые создали при каждом вызове внешней `cd`.
 2. Какая альтернатива без pipe команде `grep <some_string> <some_file> | wc -l`? `man grep` поможет в ответе на этот вопрос. Ознакомьтесь с [документом](http://www.smallo.ruhr.de/award.html) о других подобных некорректных вариантах использования pipe.  
        Ответ:  
-   vagrant@vagrant:~$ cat tst_bash
+   vagrant@vagrant:~ $ cat tst_bash
    if [[ -d /tmp ]];  
    jfgnhj  
    hkgjhkldt  
    123  
-   vagrant@vagrant:~$ grep 123 tst_bash -c  
+   vagrant@vagrant:~ $ grep 123 tst_bash -c  
    1  
-   vagrant@vagrant:~$ grep 123 tst_bash | wc -l  
+   vagrant@vagrant:~ $ grep 123 tst_bash | wc -l  
    1  
 3. Какой процесс с PID 1 является родителем для всех процессов в вашей виртуальной машине Ubuntu 20.04?  
 Ответ:  
@@ -23,14 +23,14 @@
 ![stderr ls](screenshots/stderr%20ls.png)  
 5. Получится ли одновременно передать команде файл на stdin и вывести ее stdout в другой файл? Приведите работающий пример.  
        Ответ:  
-   vagrant@vagrant:~$ cat tst_bash  
+   vagrant@vagrant:~ $ cat tst_bash  
    if [[ -d /tmp ]];  
    sdgsdfgfd  
    sdgsdfgfghdgfd  
    123  
    new line  
    11111111  
-   vagrant@vagrant:~$ cat tst_bash_out  
+   vagrant@vagrant:~ $ cat tst_bash_out  
    cat: tst_bash_out: No such file or directory   
    vagrant@vagrant:~$ cat <tst_bash >tst_bash_out  
    vagrant@vagrant:~$ cat tst_bash_out  
@@ -40,7 +40,7 @@
    123  
    new line  
    11111111  
-   vagrant@vagrant:~$  
+   vagrant@vagrant:~ $  
 6. Получится ли находясь в графическом режиме, вывести данные из PTY в какой-либо из эмуляторов TTY? Сможете ли вы наблюдать выводимые данные?  
     Ответ:  
 ![echo](screenshots/echo.png)  
