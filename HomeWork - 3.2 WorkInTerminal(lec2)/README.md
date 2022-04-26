@@ -6,7 +6,7 @@
 И выходя из сессии, придется выходить из всех сессий, которые создали при каждом вызове внешней `cd`.
 2. Какая альтернатива без pipe команде `grep <some_string> <some_file> | wc -l`? `man grep` поможет в ответе на этот вопрос. Ознакомьтесь с [документом](http://www.smallo.ruhr.de/award.html) о других подобных некорректных вариантах использования pipe.  
     Ответ:
-vagrant@vagrant:~$ cat tst_bash
+~~vagrant@vagrant:~$ cat tst_bash
 if [[ -d /tmp ]];  
 jfgnhj  
 hkgjhkldt  
@@ -14,7 +14,7 @@ hkgjhkldt
 vagrant@vagrant:~$ grep 123 tst_bash -c  
 1  
 vagrant@vagrant:~$ grep 123 tst_bash | wc -l  
-1  
+1~~  
 3. Какой процесс с PID 1 является родителем для всех процессов в вашей виртуальной машине Ubuntu 20.04?  
 Ответ:  
 ![pstree](screenshots/pstree.png)
