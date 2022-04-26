@@ -32,8 +32,8 @@
    11111111  
    vagrant@vagrant:~ $ cat tst_bash_out  
    cat: tst_bash_out: No such file or directory   
-   vagrant@vagrant:~$ cat <tst_bash >tst_bash_out  
-   vagrant@vagrant:~$ cat tst_bash_out  
+   vagrant@vagrant:~ $ cat <tst_bash >tst_bash_out  
+   vagrant@vagrant:~ $ cat tst_bash_out  
    if [[ -d /tmp ]];  
    sdgsdfgfd  
    sdgsdfgfghdgfd  
