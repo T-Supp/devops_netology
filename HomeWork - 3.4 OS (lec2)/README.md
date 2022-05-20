@@ -28,6 +28,27 @@ EnvironmentFile=/etc/default/node_exporter
 WantedBy=default.target  
 при перезапуске переменная выставляется: 
    ![1.environ](screenshots/1.environ.png)  
+
+**Доработка**  
+На примере текстового редактора Emacs  
+Конфигурационный файл:  
+```  
+[Unit]
+Description=Emacs: the extensible, self-documenting text editor
+ 
+[Service]
+Type=forking
+ExecStart=/usr/bin/emacs --daemon
+ExecStop=/usr/bin/emacsclient --eval "(kill-emacs)"
+Environment=SSH_AUTH_SOCK=%t/keyring/ssh
+Restart=always
+ 
+[Install]
+WantedBy=default.target
+```  
+Исполняемый файл `/usr/bin/emacs` запускается как демон при запуске службы. Переменная среды SSH_AUTH_SOCK задается с помощью спецификатора “%t”, который stands for the runtime directory. Сервис также перезапускает процесс emacs, если он неожиданно завершает работу.  
+![1.emacs](screenshots/1.emacs.png)  
+
 2. Ознакомьтесь с опциями node_exporter и выводом `/metrics` по-умолчанию. Приведите несколько опций, которые вы бы выбрали для базового мониторинга хоста по CPU, памяти, диску и сети.  
    Ответ:  
 CPU:  
